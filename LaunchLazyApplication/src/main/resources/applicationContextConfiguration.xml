@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<!--Defalut  constructor called-->
+        <bean id="employeeA" class="io.learning.LaunchApplication.Main.Employee"></bean>
+<!-- Parameterised constructor called-->
+        <bean  id="employeeB" class="io.learning.LaunchApplication.Main.Employee">
+                <constructor-arg name="id" value="111"/>
+                <constructor-arg name="name" value="Shilpa"/>
+                <constructor-arg name="city" value="Delhi"/>
+        </bean>
+</beans>

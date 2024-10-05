@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="java" class="io.learning.LaunchApplication.implementation.Java"></bean>
+    <bean id="springBoot" class="io.learning.LaunchApplication.implementation.SpringBoot">
+        <constructor-arg name="price" value="1212"></constructor-arg>
+    </bean>
+<!--    LooseCouplingExample = Target class-->
+<!--    Dependency injection : injecting dependent object into target object-->
+<!--    Constructor injection and setter injection-->
+    <bean id="example" class="io.learning.LaunchApplication.LooseCouplingExample">
+        <!--   setter injection-->
+        <property ref="java" name="course"></property>
+        <!--    Constructor injection-->
+        <constructor-arg ref="springBoot" name="course"></constructor-arg>
+    </bean>
+
+</beans>
