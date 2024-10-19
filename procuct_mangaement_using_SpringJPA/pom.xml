@@ -8,12 +8,11 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.shilpa.springboot</groupId>
-	<artifactId>ProjectA</artifactId>
+	<groupId>com.learning</groupId>
+	<artifactId>procuct_mangaement_using_SpringJPA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>ProjectA</name>
-	<description>Demo project for Spring Boot</description>
+	<name>procuct_mangaement_using_SpringJPA</name>
+	<description>Demo project for Spring Data JPA</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -33,13 +32,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
